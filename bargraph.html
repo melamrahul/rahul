@@ -19,14 +19,14 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-        }
-        #chartContainer {
+        } #chartContainer {
             width: 100%;
             height: 270px; /* Adjusted height */
         }
         canvas {
             height: 90% !important; /* Make sure canvas takes full height of the container */
         }
+       
     </style>
 </head>
 <body>
@@ -48,12 +48,8 @@
             measurementId: "G-SCNKZYJ3TT"
         };
 
-        // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
-
-        // Disable Firebase persistence
-        firebase.database().setPersistenceEnabled(false);
 
         const ctx = document.getElementById('myChart').getContext('2d');
         let myChart = new Chart(ctx, {
@@ -105,6 +101,7 @@
                 animateBarChart(value);
             }
         });
+        localStorage.clear();
     </script>
 </body>
 </html>
