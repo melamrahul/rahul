@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data Bar Graph</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+        #chartContainer {
+            width: 100%;
+            height: 350px; /* Adjusted height */
+        }
+        canvas {
+            height: 100% !important; /* Make sure canvas takes full height of the container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sensor Data</h2>
+        <div id="chartContainer">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAaQdWKBdtqqe3pu9XDdPoFuvcEm2YG_wA",
+            authDomain: "melam-rahul.firebaseapp.com",
+            projectId: "melam-rahul",
+            storageBucket: "melam-rahul.appspot.com",
+            messagingSenderId: "742315739002",
+            appId: "1:742315739002:web:329ea957fa38f66ab078c3",
+            measurementId: "G-SCNKZYJ3TT"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        let myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Sensor Data'],
+                datasets: [{
+                    label: 'Value',
+                    data: [0],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const dataRef = database.ref('espdata/rahul');
+        let previousValue = 0;
+
+        function animateBarChart(newValue) {
+            // Reset animation to 0 first
+            myChart.data.datasets[0].data = [0];
+            myChart.update({
+                duration: 1500,
+                easing: 'easeOutQuart'
+            });
+
+            // Update to new value after reset
+            setTimeout(() => {
+                myChart.data.datasets[0].data = [newValue];
+                myChart.update({
+                    duration: 1500,
+                    easing: 'easeOutQuart'
+                });
+            }, 500); // Wait for the reset animation to complete
+        }
+
+        dataRef.on('value', (snapshot) => {
+            const value = snapshot.val();
+            if (value !== null && value !== previousValue) {
+                previousValue = value;
+                animateBarChart(value);
+            }
+        });
+    </script>
+</body>
+</html>
