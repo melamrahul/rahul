@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Web Tools App</title>
+
+    <link rel="icon" type="image/png" href="https://melamrahul.github.io/tools/tool_logo_head.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+            --border: #4468a9;
+            --accent: #ff5e5b;
+            --border-width: 2px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--border);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 30px 15px 100px;
+        }
+
+        .hero {
+            border: var(--border-width) solid var(--border);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .payment-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .payment-card {
+            border: var(--border-width) solid var(--border);
+            padding: 20px;
+            background: white;
+            transition: all .15s ease;
+        }
+
+        .payment-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 6px 6px 0 var(--border);
+        }
+
+        .payment-title {
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .payment-desc {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .payment-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            font-size: 1.05rem;
+            font-weight: 800;
+            text-align: center;
+            text-decoration: none;
+            border: var(--border-width) solid #4068d4;
+            box-shadow: 3px 3px 0 #5293ac;
+            transition: .1s;
+        }
+
+        .payment-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 var(--border);
+        }
+
+        .primary {
+            background: transparent;
+            color: #0077ff;
+        }
+
+        .primary:hover {
+            background: #0077ff;
+            color: white;
+        }
+
+        .secondary {
+            background: transparent;
+            color: var(--accent);
+        }
+
+        .secondary:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .note {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #09759c;
+            padding: 10px 0;
+            border-top: var(--border-width) solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2 style="text-align:center;">Web Tools App</h2><br>
+
+        <div class="hero">
+            <h2>&#10084;&#65039; Help keep Web Tools App free for everyone</h2>
+        </div>
+
+        <div class="payment-grid">
+
+            <div class="payment-card">
+                <div class="payment-title">💳 Razorpay / UPI</div>
+                <div class="payment-desc">
+                    Fast & secure Indian payments via UPI, cards and net banking.
+                </div>
+
+                <a href="https://razorpay.me/@melamrahul" class="payment-btn primary">
+                    Support via Razorpay
+                </a>
+            </div>
+
+            <div style="text-align:center;margin:-10px 0;">
+                <b>( OR )</b>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-title">☕ Ko-fi</div>
+                <div class="payment-desc">
+                    Support from anywhere in the world by buying me a coffee.
+                </div>
+
+                <a href="https://ko-fi.com/ophirtools" class="payment-btn secondary">
+                    Support on Ko-fi
+                </a>
+            </div>
+
+        </div>
+
+        <div class="note">
+            Even a small contribution makes a huge difference &#10084;&#65039;<br>
+            It helps keep tools fast, free, and improving.
+        </div>
+
+    </div>
+
+    <footer>
+        Made with &#10084;&#65039; • Web Tools App
+    </footer>
+
+</body>
+
+</html>
