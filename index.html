@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Learning Portfolio – LSS 1003</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo" onclick="showPage('home')">Portfolio</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" onclick="showPage('home')"       class="active" data-page="home">Home</a></li>
+      <li><a href="#" onclick="showPage('about')"               data-page="about">About Me</a></li>
+      <li><a href="#" onclick="showPage('tasks')"               data-page="tasks">Weekly Tasks</a></li>
+      <li><a href="#" onclick="showPage('cream')"               data-page="cream">C.R.E.A.M</a></li>
+      <li><a href="#" onclick="showPage('certs')"               data-page="certs">Certificates</a></li>
+      <li><a href="#" onclick="showPage('conclusion')"          data-page="conclusion">Conclusion</a></li>
+      <li><a href="#" onclick="showPage('contact')"             data-page="contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════ PAGE 1: HOME ════════════════════════════════ -->
+  <section class="page active" id="page-home">
+    <div class="hero">
+      <div class="hero-text">
+        <div class="hero-eyebrow">E-Portfolio · LSS 1003</div>
+        <h1 class="hero-name">
+          <!-- EDIT: Replace with your name -->
+          Your <span>Full Name</span> Here
+        </h1>
+        <p class="hero-subtitle">Student · Higher Colleges of Technology</p>
+        <div class="hero-course">
+          📚 Learning Study Skills · CRN: <strong style="margin-left:4px;">XXXXX</strong>
+          <!-- EDIT: Replace XXXXX with your CRN -->
+        </div>
+        <p class="hero-id">
+          HCT Student ID: <strong>H00-XXX-XXX</strong>
+          <!-- EDIT: Replace with your ID -->
+        </p>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-frame" id="heroFrame">
+          <div class="corner-decoration"></div>
+          <div class="corner-decoration bl"></div>
+          <!-- OPTION A: Replace src with your AI-generated image -->
+          <!-- <img src="your-ai-image.jpg" alt="Future career AI image" /> -->
+
+          <!-- OPTION B: Placeholder shown until you add your image -->
+          <div class="hero-image-placeholder">
+            <div class="icon">🤖</div>
+            <p>Replace this with your<br><strong style="color:#c9a84c;">AI-generated image</strong><br>showing your future career</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ PAGE 2: ABOUT ME ════════════════════════════════ -->
+  <section class="page" id="page-about">
+    <div class="section-header">
+      <p class="section-eyebrow">Page 2</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Who I am, my purpose, goals, and interests</p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-card full">
+        <div class="card-label">Who I Am</div>
+        <p>
+          <!-- EDIT: Write about yourself using I am..., I enjoy..., I recognize..., I am willing to... -->
+          I am a dedicated student at the Higher Colleges of Technology, majoring in [Your Major]. 
+          I enjoy [your hobbies/interests]. I recognize the importance of continuous learning and 
+          self-improvement in today's rapidly changing world. I am willing to put in the effort 
+          required to achieve my academic and professional goals.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <div class="card-label">Purpose of this Portfolio</div>
+        <p>
+          <!-- EDIT: Write the purpose of your e-portfolio -->
+          This e-portfolio serves as a comprehensive record of my learning journey throughout 
+          LSS 1003. It showcases the skills, knowledge, and competencies I have developed 
+          during this course, and reflects my growth as a self-directed learner.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <div class="card-label">Professional Goals</div>
+        <ul class="goals-list">
+          <!-- EDIT: Add your own professional goals -->
+          <li>Learn effective time management strategies to improve academic performance</li>
+          <li>Develop critical thinking skills applicable to my field of study</li>
+          <li>Build proficiency in digital tools used in professional environments</li>
+          <li>Strengthen my communication skills in academic and workplace contexts</li>
+          <li>Achieve academic excellence while maintaining a healthy work-life balance</li>
+        </ul>
+      </div>
+
+      <div class="about-card">
+        <div class="card-label">My Interests</div>
+        <div class="interests-tags">
+          <!-- EDIT: Replace with your own interests -->
+          <span class="tag">Technology</span>
+          <span class="tag">Reading</span>
+          <span class="tag">Problem Solving</span>
+          <span class="tag">Design</span>
+          <span class="tag">Sports</span>
+          <span class="tag">Photography</span>
+          <span class="tag">Music</span>
+          <span class="tag">Travel</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ PAGE 3: WEEKLY TASKS ════════════════════════════════ -->
+  <section class="page" id="page-tasks">
+    <div class="section-header">
+      <p class="section-eyebrow">Page 3</p>
+      <h2 class="section-title">Weekly Tasks</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">All 15 weekly deliverables from LSS 1003</p>
+    </div>
+
+    <div class="tasks-container">
+
+      <!-- WEEK 1 -->
+      <div class="week-group">
+        <div class="week-label">Week 1</div>
+        <div class="tasks-grid">
+
+          <div class="task-card">
+            <div class="task-badge">W1 · L1</div>
+            <h4>Course Learning Objectives</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">📋</div>
+              Click to add content / paste text
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Paste or type the Course Learning Objectives here..."></textarea>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-badge">W1 · L1</div>
+            <h4>Assessment Strategy</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">📊</div>
+              Click to add content / paste text
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Describe the assessment strategy for this course..."></textarea>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-badge">W1 · L2</div>
+            <h4>VARK Questionnaire Result</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">📝</div>
+              Click to add your VARK result
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="My VARK result is: [Visual/Aural/Read-Write/Kinesthetic]. This means..."></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WEEK 2 -->
+      <div class="week-group">
+        <div class="week-label">Week 2</div>
+        <div class="tasks-grid">
+
+          <div class="task-card">
+            <div class="task-badge">W2 · L1</div>
+            <h4>OneDrive Screenshot – LSS 1003 Folder with 2 Subfolders</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">🖼️</div>
+              Click to add screenshot description / embed image
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Describe your OneDrive folder structure, or add an &lt;img&gt; tag with your screenshot..."></textarea>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-badge">W2 · L1</div>
+            <h4>Weekly Schedule on Excel – Screenshot</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">📅</div>
+              Click to add screenshot
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Add your Excel weekly schedule screenshot here..."></textarea>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-badge">W2 · L2</div>
+            <h4>AI Tools I Use – Images</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">🤖</div>
+              Click to add AI tools content
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="List the AI tools you use (e.g., ChatGPT, Copilot, DALL-E) and add their logos or screenshots..."></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WEEK 3 -->
+      <div class="week-group">
+        <div class="week-label">Week 3</div>
+        <div class="tasks-grid">
+
+          <div class="task-card">
+            <div class="task-badge">W3 · L1</div>
+            <h4>SQ3R Reading Strategy Worksheet (PDF)</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">📄</div>
+              Click to embed PDF or describe
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Embed your completed SQ3R PDF using &lt;iframe&gt; or describe your answers here..."></textarea>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-badge">W3 · L2</div>
+            <h4>Bias Detector Poster – 3 Signs of Bias + 2 Tips</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">🎨</div>
+              Click to add poster image
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Add your Bias Detector Poster here. Include 3 signs of bias and 2 tips to avoid it..."></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WEEK 4 -->
+      <div class="week-group">
+        <div class="week-label">Week 4</div>
+        <div class="tasks-grid">
+
+          <div class="task-card">
+            <div class="task-badge">W4 · L1</div>
+            <h4>Notetaking done with Copilot</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">✍️</div>
+              Click to add Copilot notes
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Paste your Copilot-assisted notes here or add a screenshot..."></textarea>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-badge">W4 · L2</div>
+            <h4>Mind Map – Benefits of Lists OR Memory Techniques</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">🗺️</div>
+              Click to add mind map
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Add your mind map image here, or embed it..."></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WEEK 5 -->
+      <div class="week-group">
+        <div class="week-label">Week 5</div>
+        <div class="tasks-grid">
+
+          <div class="task-card">
+            <div class="task-badge">W5 · L1</div>
+            <h4>Reflection Sheet on Learning Styles</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">🪞</div>
+              Click to add reflection
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Write your reflection on learning styles here..."></textarea>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-badge">W5 · L2</div>
+            <h4>Microsoft To Do – "Study Plan – This Week"</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">✅</div>
+              Click to add screenshot
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Add a screenshot of your Microsoft To Do list named 'Study Plan – This Week'..."></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WEEK 6 -->
+      <div class="week-group">
+        <div class="week-label">Week 6</div>
+        <div class="tasks-grid">
+
+          <div class="task-card">
+            <div class="task-badge">W6 · L1</div>
+            <h4>3 Sentences – AI Ethics, Bias & Data Privacy</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">🔐</div>
+              Click to write your 3 sentences
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Write exactly 3 sentences about what you learned from the lesson on 'Using AI Critically and Ethically in Learning, Bias, and Data Privacy'..."></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WEEK 7 -->
+      <div class="week-group">
+        <div class="week-label">Week 7</div>
+        <div class="tasks-grid">
+
+          <div class="task-card">
+            <div class="task-badge">W7 · L1</div>
+            <h4>Favorite Study Place + Pre-Study Routine</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">📸</div>
+              Click to add photo & description
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Add a photo of your favorite study place and write 1-2 sentences about what you like to do before studying..."></textarea>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-badge">W7 · L2</div>
+            <h4>SMART Goal OR WOOP Goal for this Semester</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">🎯</div>
+              Click to write your goal
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Write one SMART goal (Specific, Measurable, Achievable, Relevant, Time-bound) OR one WOOP goal (Wish, Outcome, Obstacle, Plan)..."></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WEEK 8 -->
+      <div class="week-group">
+        <div class="week-label">Week 8</div>
+        <div class="tasks-grid">
+
+          <div class="task-card">
+            <div class="task-badge">W8 · L1</div>
+            <h4>Time Blocking (6am–10pm) OR Kanban Board</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">⏰</div>
+              Click to add screenshot
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Add a screenshot of your Time Blocking activity or Kanban board here..."></textarea>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-badge">W8 · L2</div>
+            <h4>Digital Integrity Poster – 3 Tips + 1 Example</h4>
+            <div class="task-upload-area" onclick="toggleTaskContent(this)">
+              <div class="upload-icon">🛡️</div>
+              Click to add poster
+            </div>
+            <div class="task-content-area">
+              <textarea placeholder="Add your Digital Integrity Poster showing 3 tips on being a responsible digital student + 1 example..."></textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- end tasks-container -->
+  </section>
+
+  <!-- ════════════════════════════════ PAGE 4: C.R.E.A.M ════════════════════════════════ -->
+  <section class="page" id="page-cream">
+    <div class="section-header">
+      <p class="section-eyebrow">Page 4</p>
+      <h2 class="section-title">Effective Learning Techniques</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">How I apply the C.R.E.A.M strategy in my learning</p>
+    </div>
+
+    <p class="cream-note">
+      ⚠️ No AI-generated images allowed on this page. Use real photos or original visuals only.
+    </p>
+
+    <div class="cream-grid">
+
+      <div class="cream-card">
+        <div class="cream-letter">C</div>
+        <div class="cream-word">Creative</div>
+        <textarea placeholder="Explain how you are creative in your learning. Give specific examples — e.g., how you use mind maps, visual notes, or creative projects to understand topics..."></textarea>
+      </div>
+
+      <div class="cream-card">
+        <div class="cream-letter">R</div>
+        <div class="cream-word">Reflective</div>
+        <textarea placeholder="Explain how you reflect on your learning. For example: reviewing notes after class, journaling, asking yourself what you understood and what needs more work..."></textarea>
+      </div>
+
+      <div class="cream-card">
+        <div class="cream-letter">E</div>
+        <div class="cream-word">Effective</div>
+        <textarea placeholder="Explain the strategies that make your study effective. For example: using SQ3R, focused study sessions, eliminating distractions..."></textarea>
+      </div>
+
+      <div class="cream-card">
+        <div class="cream-letter">A</div>
+        <div class="cream-word">Active</div>
+        <textarea placeholder="Explain how you are an active learner. For example: participating in class, asking questions, taking your own notes, not just copying..."></textarea>
+      </div>
+
+      <div class="cream-card">
+        <div class="cream-letter">M</div>
+        <div class="cream-word">Motivated</div>
+        <textarea placeholder="Explain what motivates you to learn. What are your personal drivers? How do you stay focused and push through challenges?"></textarea>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ PAGE 5: CERTIFICATES ════════════════════════════════ -->
+  <section class="page" id="page-certs">
+    <div class="section-header">
+      <p class="section-eyebrow">Page 5</p>
+      <h2 class="section-title">Achievements & Certificates</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">LinkedIn Learning certificates and recognitions</p>
+    </div>
+
+    <div class="certs-container">
+
+      <div class="cert-mandatory-label">LinkedIn Learning Certificates</div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card">
+          <div class="cert-icon">📚</div>
+          <h3>Learning Study Skills</h3>
+          <p>Complete this course on LinkedIn Learning and upload your certificate of attendance below.</p>
+          <div class="cert-upload" onclick="toggleTaskContent(this)">
+            🏅 Click to add certificate image / description
+          </div>
+          <div class="task-content-area" style="margin-top:0.75rem;">
+            <textarea placeholder="Add your LinkedIn Learning certificate here. You can embed an image using HTML or paste a link..."></textarea>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">⏱️</div>
+          <h3>Time Management Fundamentals</h3>
+          <p>Complete this course on LinkedIn Learning and upload your certificate of attendance below.</p>
+          <div class="cert-upload" onclick="toggleTaskContent(this)">
+            🏅 Click to add certificate image / description
+          </div>
+          <div class="task-content-area" style="margin-top:0.75rem;">
+            <textarea placeholder="Add your LinkedIn Learning certificate here. You can embed an image using HTML or paste a link..."></textarea>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="optional-section">
+        <div class="optional-label">Awards & Recognitions</div>
+        <div class="awards-area">
+          🏆 Add any awards, scholarships, or recognitions here
+          <p>This section is optional. Edit index.html to add your achievements with images or descriptions.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ PAGE 6: CONCLUSION ════════════════════════════════ -->
+  <section class="page" id="page-conclusion">
+    <div class="section-header">
+      <p class="section-eyebrow">Page 6</p>
+      <h2 class="section-title">Conclusion</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">A 60–90 second video reflecting on my LSS 1003 journey</p>
+    </div>
+
+    <div class="conclusion-wrapper">
+
+      <div class="video-frame">
+        <!--
+          TO ADD YOUR VIDEO:
+          Option A – YouTube embed:
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            frameborder="0" allowfullscreen style="border-radius:16px;"></iframe>
+
+          Option B – Local video file:
+          <video controls width="100%" style="border-radius:16px;">
+            <source src="my-reflection-video.mp4" type="video/mp4">
+          </video>
+        -->
+        <div class="video-placeholder">
+          <div class="play-icon">▶</div>
+          <h3>Your Reflection Video</h3>
+          <p>Record a 60–90 second video and embed it here<br>using a YouTube link or a local video file</p>
+        </div>
+      </div>
+
+      <div class="video-tips">
+        <div class="tip-card">
+          <div class="tip-icon">⏱️</div>
+          <h4>Duration</h4>
+          <p>Keep it between 60 and 90 seconds — no shorter, no longer</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">💬</div>
+          <h4>What to Say</h4>
+          <p>Talk about your key learnings, growth, and how this course helped you</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">📤</div>
+          <h4>How to Upload</h4>
+          <p>Upload to YouTube (unlisted) and paste the embed link in the HTML</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ PAGE 7: CONTACT ════════════════════════════════ -->
+  <section class="page" id="page-contact">
+    <div class="section-header">
+      <p class="section-eyebrow">Page 7</p>
+      <h2 class="section-title">Contact Us</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Get in touch with me</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="contact-form">
+        <h2 class="form-title">Get In Touch</h2>
+        <p class="form-subtitle">Fill in the form below to send me a message.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <!-- EDIT: Change value to your actual name -->
+            <input type="text" value="Your Full Name" readonly />
+          </div>
+          <div class="form-group">
+            <label>HCT Student ID</label>
+            <!-- EDIT: Change value to your actual HCT ID -->
+            <input type="text" value="H00-XXX-XXX" readonly />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>HCT Email</label>
+          <!-- EDIT: Change value to your HCT email -->
+          <input type="email" value="h00xxxxxx@hct.ac.ae" readonly />
+        </div>
+
+        <div class="form-group">
+          <label>Sender's Name</label>
+          <input type="text" placeholder="Enter your name" />
+        </div>
+
+        <div class="form-group">
+          <label>Sender's Email</label>
+          <input type="email" placeholder="Enter your email" />
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Write your message here..."></textarea>
+        </div>
+
+        <button class="submit-btn" onclick="handleSubmit()">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>© 2025 Your Name · LSS 1003 Portfolio</span>
+    <span style="color:var(--gray)">Higher Colleges of Technology</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
